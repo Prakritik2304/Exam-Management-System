@@ -1,0 +1,102 @@
+EXAM:-
+
+Enter password: chiya
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| employee           |
+| information_schema |
+| mysql              |
+| performance_schema |
+| product            |
+| product1           |
+| sakila             |
+| student1           |
+| student2           |
+| student3           |
+| sys                |
+| world              |
++--------------------+
+12 rows in set (0.00 sec)
+
+mysql> create database Exam;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> use Exam;
+Database changed
+
+mysql> create table Teacherinfo(TeacherID int, Name varchar(100), Department varchar(100), MobileNo bi
+gint, Password varchar(100));
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> create table Studentdetails(StudentID int, Rollno int, Name varchar(100), MobileNo bigint, EmailID varchar(100), Branch varchar(100), Semester int, Password varchar(100));
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> create table Marks(Rollno int, Subject1 varchar(100), Subject2 varchar(100), Subject3 varchar(100), Subject4 varchar(100), Subject5 varchar(100), Marks1 int, Marks2 int, Marks3 int, Marks4 int, Marks5 int);
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> show tables;
++----------------+
+| Tables_in_exam |
++----------------+
+| marks          |
+| studentdetails |
+| teacherinfo    |
++----------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from Teacherinfo;
++-----------+-------+------------------------------+-----------+-----------+
+| TeacherID | Name  | Department                   | MobileNo  | Password  |
++-----------+-------+------------------------------+-----------+-----------+
+|       123 | chiya | Computer Science Engineering | 123456789 | 123456789 |
++-----------+-------+------------------------------+-----------+-----------+
+1 row in set (0.00 sec)
+
+mysql> select * from Studentdetails;
++-----------+--------+--------+-----------+---------------+------------------------------+----------+-----------+
+| StudentID | Rollno | Name   | MobileNo  | EmailID       | Branch                       | Semester | Password  |
++-----------+--------+--------+-----------+---------------+------------------------------+----------+-----------+
+|     12345 |      1 | kitkat | 123789456 | kit@gmail.com | Computer Science Engineering |        5 | 520863147 |
++-----------+--------+--------+-----------+---------------+------------------------------+----------+-----------+
+1 row in set (0.00 sec)
+
+mysql> select * from Marks;
++--------+----------+----------+----------+----------+----------+--------+--------+--------+--------+--------+
+| Rollno | Subject1 | Subject2 | Subject3 | Subject4 | Subject5 | Marks1 | Marks2 | Marks3 | Marks4 | Marks5 |
++--------+----------+----------+----------+----------+----------+--------+--------+--------+--------+--------+
+|      1 | os       | dbms     | c++      | c        | java     |     90 |     85 |     74 |     20 |     69 |
++--------+----------+----------+----------+----------+----------+--------+--------+--------+--------+--------+
+1 row in set (0.00 sec)
+
+mysql> select * from Studentdetails;
++-----------+--------+--------+------------+---------------+------------------------------+----------+-----------+
+| StudentID | Rollno | Name   | MobileNo   | EmailID       | Branch                       | Semester | Password  |
++-----------+--------+--------+------------+---------------+------------------------------+----------+-----------+
+|     12345 |      1 | kitkat |  123789456 | kit@gmail.com | Computer Science Engineering |        5 | 520863147 |
+|       123 |      2 | chiya  | 8527419630 | bik@gmail.com | Computer Science Engineering |        1 | 520963    |
++-----------+--------+--------+------------+---------------+------------------------------+----------+-----------+
+2 rows in set (0.00 sec)
+
+mysql> select * from Studentdetails;
++-----------+--------+--------+------------+-----------------+------------------------------+----------+-----------+
+| StudentID | Rollno | Name   | MobileNo   | EmailID         | Branch                       | Semester | Password  |
++-----------+--------+--------+------------+-----------------+------------------------------+----------+-----------+
+|     12345 |      1 | kitkat |  123789456 | kit@gmail.com   | Computer Science Engineering |        5 | 520863147 |
+|       123 |      2 | chiya  | 8527419630 | bik@gmail.com   | Computer Science Engineering |        1 | 520963    |
+|        56 |      3 | Lion   | 7474747474 | op@123gmail.com | Computer Science Engineering |        2 | 456       |
++-----------+--------+--------+------------+-----------------+------------------------------+----------+-----------+
+3 rows in set (0.00 sec)
+
+mysql> select * from Marks;
++--------+----------+----------+----------+----------+----------+--------+--------+--------+--------+--------+
+| Rollno | Subject1 | Subject2 | Subject3 | Subject4 | Subject5 | Marks1 | Marks2 | Marks3 | Marks4 | Marks5 |
++--------+----------+----------+----------+----------+----------+--------+--------+--------+--------+--------+
+|      1 | os       | dbms     | c++      | c        | java     |     90 |     85 |     74 |     20 |     69 |
+|      2 | os       | dbms     | c++      | c        | java     |     12 |     20 |     13 |     15 |     19 |
+|      3 | os       | dbms     | c++      | c        | java     |     56 |     89 |     78 |     52 |     58 |
++--------+----------+----------+----------+----------+----------+--------+--------+--------+--------+--------+
+3 rows in set (0.00 sec)
+
