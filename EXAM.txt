@@ -1,23 +1,14 @@
 EXAM:-
 
-Enter password: chiya
-
 mysql> show databases;
 +--------------------+
 | Database           |
 +--------------------+
 | employee           |
-| information_schema |
-| mysql              |
-| performance_schema |
 | product            |
-| product1           |
-| sakila             |
 | student1           |
 | student2           |
 | student3           |
-| sys                |
-| world              |
 +--------------------+
 12 rows in set (0.00 sec)
 
